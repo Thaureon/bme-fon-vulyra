@@ -6,5 +6,4 @@ namespace bme_fon_vulyra.Data
     public class ApplicationUser : IdentityUser
     {
     }
-
 }
