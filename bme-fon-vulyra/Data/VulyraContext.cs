@@ -15,30 +15,9 @@ namespace bme_fon_vulyra.Data
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<GameSchedule> GameSchedules { get; set; }
         public DbSet<Game> Games { get; set; }
 
-        public VulyraContext()
-        {
-        }
-
-        public VulyraContext(string connectionString) : base(new DbContextOptionsBuilder().UseSqlServer(connectionString).Options)
-        {
-        }
-
-        public VulyraContext(DbContextOptions options) : base(options)
-        {
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            //if (modelBuilder == null)
-            //    throw new ArgumentNullException("modelBuilder");
-
-            //modelBuilder.AddRemoveOneToManyCascadeConvention();
-
-            //modelBuilder.ApplyConventions();
-
-            //base.OnModelCreating(modelBuilder);
-        }
+        public VulyraContext(DbContextOptions<VulyraContext> options) : base(options) { }
     }
 }

@@ -1,6 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-using Microsoft.Build.Framework;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace bme_fon_vulyra.Data.Models
 {
@@ -12,6 +11,6 @@ namespace bme_fon_vulyra.Data.Models
         [Required]
         [ForeignKey(nameof(Player))]
         public Guid? PlayerId { get; set; }
-        public Player? Player { get; set; }
+        public virtual Player? Player { get; set; }
     }
 }

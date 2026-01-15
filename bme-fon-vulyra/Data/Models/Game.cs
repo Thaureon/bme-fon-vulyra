@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-using Microsoft.Build.Framework;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace bme_fon_vulyra.Data.Models
 {
@@ -8,10 +6,5 @@ namespace bme_fon_vulyra.Data.Models
     {
         [Required]
         public Guid? Id { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Schedule))]
-        public Guid? ScheduleId { get; set; }
-        public Schedule? Schedule { get; set; }
     }
 }
