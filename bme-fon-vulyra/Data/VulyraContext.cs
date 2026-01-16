@@ -1,3 +1,4 @@
+using bme_fon_vulyra.Data.Helpers;
 using bme_fon_vulyra.Data.Models;
 
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -15,9 +16,16 @@ namespace bme_fon_vulyra.Data
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
-        public DbSet<GameSchedule> GameSchedules { get; set; }
+        public DbSet<GamePlayer> GamePlayers { get; set; }
         public DbSet<Game> Games { get; set; }
 
         public VulyraContext(DbContextOptions<VulyraContext> options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.AddRemoveOneToManyCascadeConvention();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

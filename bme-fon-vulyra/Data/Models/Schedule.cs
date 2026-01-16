@@ -9,9 +9,9 @@ namespace bme_fon_vulyra.Data.Models
         public Guid Id { get; set; }
 
         [Required]
-        [ForeignKey(nameof(Player))]
-        public Guid? PlayerId { get; set; }
-        public virtual Player? Player { get; set; }
+        [ForeignKey(nameof(Tournament))]
+        public Guid? TournamentId { get; set; }
+        public virtual Tournament? Tournament { get; set; }
         public DateTimeOffset? CreatedOn { get; set; }
     }
 }

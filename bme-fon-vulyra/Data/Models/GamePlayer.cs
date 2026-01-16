@@ -4,9 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace bme_fon_vulyra.Data.Models
 {
-    public class GameSchedule : IEntity, IAuditable
+    public class GamePlayer : IEntity, IAuditable
     {
         public Guid Id { get; set; }
+
+        public int Score { get; set; }
 
         [Required]
         [ForeignKey(nameof(Game))]
@@ -14,9 +16,9 @@ namespace bme_fon_vulyra.Data.Models
         public virtual Game? Game { get; set; }
 
         [Required]
-        [ForeignKey(nameof(Schedule))]
-        public Guid? ScheduleId { get; set; }
-        public virtual Schedule? Schedule { get; set; }
+        [ForeignKey(nameof(Player))]
+        public Guid? PlayerId { get; set; }
+        public virtual Player? Player { get; set; }
         public DateTimeOffset? CreatedOn { get; set; }
     }
 }

@@ -8,6 +8,9 @@ namespace bme_fon_vulyra.Data.Models
     {
         public Guid Id { get; set; }
 
+        public string Name { get; set; }
+        public int SeedNumber { get; set; }
+
         [Required]
         [ForeignKey(nameof(Tournament))]
         public Guid? TournamentId { get; set; }
