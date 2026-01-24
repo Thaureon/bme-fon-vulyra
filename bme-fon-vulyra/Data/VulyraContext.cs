@@ -13,6 +13,7 @@ namespace bme_fon_vulyra.Data
 
     public class VulyraContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Account> Accounts { get; set; }
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Schedule> Schedules { get; set; }

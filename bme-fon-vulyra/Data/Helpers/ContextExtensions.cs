@@ -8,10 +8,10 @@ namespace bme_fon_vulyra.Data.Helpers
         {
             foreach (var entityType in builder.Model.GetEntityTypes())
             {
-                entityType..Add(et => et.GetForeignKeys()
+                entityType.GetForeignKeys()
                     .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade)
                     .ToList()
-                    .ForEach(fk => fk.DeleteBehavior = DeleteBehavior.Restrict));
+                    .ForEach(fk => fk.DeleteBehavior = DeleteBehavior.Restrict);
             }
         }
     }
