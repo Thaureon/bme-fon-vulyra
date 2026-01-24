@@ -56,6 +56,12 @@ The repository represents learning in motion rather than a finalized product.
 
 ---
 
-## Status
+## 🏁 Project Outcome
 
-🟡 Active — January 2026
+This project was concluded early due to burnout caused by attempting to work
+on too many BME-FON projects concurrently.
+
+Rather than forcing continued progress, the project was intentionally closed
+to preserve sustainability and maintain focus across remaining projects.
+
+This repository remains as a record of the original intent and planning.
